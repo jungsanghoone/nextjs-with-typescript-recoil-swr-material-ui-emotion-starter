@@ -2,6 +2,8 @@ A TypeScript starter for Next.js that includes all you need to build amazing pro
 
 - **Next.js**
 - **TypeScript**
+- **Recoil**
+- **SWR**
 - **Material-ui**
 - **Emotion**
 - ESLint
