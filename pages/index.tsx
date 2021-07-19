@@ -5,6 +5,7 @@ import Box from '@material-ui/core/Box';
 import { Button } from '@material-ui/core';
 import Counter from '../components/Counter';
 import Example from '../components/Example';
+import InfiniteExample from '../components/InfiniteExample';
 
 export default function Index(): JSX.Element {
   return (
@@ -17,6 +18,7 @@ export default function Index(): JSX.Element {
         <div>
           <Counter />
           <Example />
+          <InfiniteExample />
         </div>
       </Box>
     </Container>
