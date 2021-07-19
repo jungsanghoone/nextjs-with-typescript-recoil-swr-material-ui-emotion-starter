@@ -2,6 +2,8 @@ A TypeScript starter for Next.js that includes all you need to build amazing pro
 
 - **Next.js**
 - **TypeScript**
+- **Recoil**
+- **SWR**
 - **Material-ui**
 - **Emotion**
 - ESLint
@@ -14,7 +16,7 @@ A TypeScript starter for Next.js that includes all you need to build amazing pro
 
 The best way to start with this template is using `create-next-app`.
 
-`npx create-next-app nextjs-tme -e https://github.com/jungsanghoone/nextjs-material-emotion`
+`npx create-next-app nextjs-with-trsme-starter -e https://github.com/jungsanghoone/nextjs-with-typescript-recoil-swr-material-ui-emotion-starter`
 
 If you prefer you can clone this repository and run the following commands inside the project folder:
 
