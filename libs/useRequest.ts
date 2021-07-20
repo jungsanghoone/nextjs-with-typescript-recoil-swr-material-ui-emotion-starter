@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import useSWR, { SWRConfiguration, SWRResponse, useSWRInfinite } from 'swr';
 import axios, { AxiosRequestConfig, AxiosResponse, AxiosError } from 'axios';
 
@@ -59,7 +60,18 @@ export default function useRequest<Data = unknown, Error = unknown>(
   };
 }
 
-export const usePaginatePosts = (path: string) => {
+interface Data {
+  posts: never[];
+  error: any;
+  isLoadingMore: boolean | undefined;
+  size: number;
+  setSize: (
+    size: number | ((size: number) => number),
+  ) => Promise<any[] | undefined>;
+  isReachingEnd: boolean | undefined;
+}
+
+export const usePaginatePosts = (path: string): Data => {
   if (!path) {
     throw new Error('Path is required');
   }

@@ -1,4 +1,12 @@
-export default function Post({ post }): JSX.Element {
+interface Data {
+  post: {
+    id: string;
+    title: string;
+    body: string;
+  };
+}
+
+export default function Post({ post }: Data): JSX.Element {
   const { title, body, id } = post;
   return (
     <div className="Card">

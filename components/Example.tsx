@@ -7,10 +7,9 @@ export default function Example(): JSX.Element {
   const { data } = useRequest<string[]>({
     url: '/api/data',
   });
-
   return (
     <div style={{ textAlign: 'center' }}>
-      <h1>Trending Projects</h1>
+      <h1>Dynamic nested Route Example</h1>
       <div>
         {data
           ? data.map(project => (

@@ -1,11 +1,21 @@
 import React from 'react';
 import Link from 'next/link';
-
 import useRequest from '../../libs/useRequest';
 
-export default function Repo(): JSX.Element {
-  const id =
-    typeof window !== 'undefined' ? window.location.pathname.slice(1) : '';
+type Data = {
+  user: string;
+  repo: string;
+};
+
+type Param = {
+  query: {
+    user: string;
+    repo: string;
+  };
+};
+export default function Repo({ user, repo }: Data): JSX.Element {
+  //const id = typeof window !== 'undefined' ? window.location.pathname.slice(1) : '';
+  const id = `${user}/${repo}`;
   const { data } = useRequest<{
     forks_count: number;
     stargazers_count: number;
@@ -37,3 +47,7 @@ export default function Repo(): JSX.Element {
     </div>
   );
 }
+
+Repo.getInitialProps = ({ query: { user, repo } }: Param) => {
+  return { user, repo };
+};

@@ -3,9 +3,9 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import { Button } from '@material-ui/core';
-import Counter from '../components/Counter';
 import Example from '../components/Example';
 import InfiniteExample from '../components/InfiniteExample';
+import Link from 'next/link';
 
 export default function Index(): JSX.Element {
   return (
@@ -16,8 +16,12 @@ export default function Index(): JSX.Element {
         </Typography>
         <Button variant={'contained'}>Next.js</Button>
         <div>
-          <Counter />
+          <Link href={{ pathname: '/counter', query: { id: 'test' } }}>
+            Counter Example
+          </Link>
+          <br />
           <Example />
+          <br />
           <InfiniteExample />
         </div>
       </Box>
